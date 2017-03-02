@@ -13,8 +13,8 @@
         }
       };
     })
-    .controller('RamlInitializerController', ['$scope', '$window', 'ramlParser', function RamlInitializerController(
-      $scope, $window, ramlParser
+    .controller('RamlInitializerController', ['$location', '$scope', '$window', 'ramlParser', function RamlInitializerController(
+      $location, $scope, $window, ramlParser
     ) {
       $scope.vm = {
         codeMirror: {
@@ -38,8 +38,8 @@
       // ---
 
       (function activate() {
-        if (document.location.search.indexOf('?raml=') !== -1) {
-          loadFromUrl(document.location.search.replace('?raml=', ''));
+        if ('raml' in $location.search()) {
+          loadFromUrl($location.search().raml);
         }
       })();
 
