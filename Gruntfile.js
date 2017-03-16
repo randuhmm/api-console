@@ -26,7 +26,6 @@ module.exports = function (grunt) {
         'bower_components/codemirror/addon/search/search.js',
         'bower_components/codemirror/addon/search/searchcursor.js',
         'bower_components/codemirror/addon/lint/lint.js',
-        'bower_components/angular/angular.js',
         'bower_components/angular-ui-codemirror/ui-codemirror.js',
         'bower_components/angular-marked/angular-marked.js',
         'bower_components/angular-highlightjs/angular-highlightjs.js',
